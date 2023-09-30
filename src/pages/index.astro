@@ -1,26 +1,32 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Sidebar from '../components/Sidebar'
 import { Image } from 'astro:assets'
-import Logo from '../assets/logo.jpg'
+
+import globalWarming from '../assets/global_warming_ilus.webp'
+
+import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<Sidebar client:load>
-			<Image src={Logo} alt="Erasmus Logo" class="w-20" />
-		</Sidebar>
-		<section class="flex min-h-screen w-full items-center justify-center">
-			<div>
-				<h1 class="font-MontSerrat text-6xl font-thin uppercase">Hello World</h1>
-				<p class="font-Mulish max-w-sm">
-					Lorem ipsum, dolor sit <span class="font-bold text-textOrange">amet</span> consectetur
-					adipisicing elit. Et animi ea quis at amet repellat quasi recusandae quaerat placeat,
-					itaque veritatis quia earum praesentium <span class="font-bold text-textBlue"
-						>aliquid</span
-					> nulla veniam nobis. Voluptas, voluptatum!
+	<main class="min-h-[200vh]">
+		<section class="mx-[5%] mt-[190px] grid grid-cols-1 sm:mx-[10%] lg:grid-cols-2">
+			<div class="animate-show-up flex flex-col items-start justify-center gap-3 opacity-0">
+				<h1 class="font-mont text-4xl sm:text-5xl xl:text-6xl">
+					<span class="font-semibold text-textBlue">Before</span> It's <span
+						class="whitespace-nowrap font-semibold text-textOrange">Too Late</span
+					>
+				</h1>
+				<p class="ml-1 max-w-xs text-sm sm:ml-2 sm:max-w-xl sm:text-base xl:text-lg">
+					This is our <span class="font-semibold">only</span> planet, we have no other home. Our
+					world has aged and its <span class="font-semibold">burden</span> has become heavier. We
+					don't have time to linger, we have to do <span class="font-semibold">something</span>.
 				</p>
 			</div>
+			<Image
+				src={globalWarming}
+				loading="eager"
+				alt="Global Warming Ilustration"
+				class="animate-show-up opacity-0"
+			/>
 		</section>
 	</main>
 </Layout>

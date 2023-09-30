@@ -1,7 +1,13 @@
 ---
 import '@/styles/globals.css'
+
 import '@fontsource-variable/mulish'
 import '@fontsource-variable/montserrat'
+
+import Sidebar from '../components/Sidebar'
+import { Image } from 'astro:assets'
+import Logo from '../assets/logo.jpg'
+
 interface Props {
 	title: string
 }
@@ -18,7 +24,16 @@ const { title } = Astro.props
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-white font-Mulish">
+	<body class="font-mulish bg-white">
+		<Sidebar client:load>
+			<Image src={Logo} loading="eager" alt="Erasmus Logo" class="w-20" />
+		</Sidebar>
 		<slot />
 	</body>
 </html>
+
+<style is:global>
+	.nav-shadow {
+		box-shadow: 0px 0.75px 15px #eeeeee;
+	}
+</style>

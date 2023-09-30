@@ -68,11 +68,20 @@ module.exports = {
 				'accordion-up': {
 					from: { height: 'var(--radix-accordion-content-height)' },
 					to: { height: 0 }
+				},
+				'show-up': {
+					'0%': { opacity: 0, transform: 'translateY(20px)' },
+					'100%': { opacity: 1, transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'show-up': 'show-up 0.75s cubic-bezier(0.45, 0, 0.55, 1) forwards'
+			},
+			fontFamily: {
+				mont: ['Montserrat Variable', 'sans-serif'],
+				mulish: ['Mulish Variable', 'sans-serif']
 			}
 		}
 	},

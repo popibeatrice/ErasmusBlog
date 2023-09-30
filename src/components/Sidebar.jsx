@@ -9,29 +9,34 @@ import {
 
 export default function Sidebar({ children }) {
 	return (
-		<header className="mx-auto flex w-[90%] items-center justify-between py-5">
+		<header className="nav-shadow fixed left-0 right-0 top-0 z-10 mx-auto flex items-center justify-between bg-white px-[5vw] py-3 sm:px-[2.5vw]">
 			{children}
 			<Sheet>
-				<SheetTrigger>
+				<SheetTrigger className="rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 20 20"
-						fill="currentColor"
-						className="h-10 w-10"
+						fill="none"
+						viewBox="0 0 24 24"
+						strokeWidth={1.5}
+						stroke="currentColor"
+						className="h-8 w-8"
 					>
 						<path
-							fillRule="evenodd"
-							d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
-							clipRule="evenodd"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5"
 						/>
 					</svg>
+					<span className="sr-only">Open</span>
 				</SheetTrigger>
 				<SheetContent>
 					<SheetHeader>
 						<SheetTitle>Are you sure absolutely sure?</SheetTitle>
 						<SheetDescription>
 							This action cannot be undone. This will permanently delete your account and remove
-							your data from our servers.
+							your data from our servers. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+							Numquam quidem eius, odio rerum perferendis libero dolorum, unde illum soluta officia
+							praesentium vel fugiat? Impedit ducimus consequatur rerum odit sapiente voluptates!
 						</SheetDescription>
 					</SheetHeader>
 				</SheetContent>
