@@ -1,15 +1,41 @@
 {
-  "name": "erasmusblog",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^3.2.0"
-  }
+	"name": "erasmusblog",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/prefetch": "^0.4.0",
+		"@astrojs/react": "^3.0.2",
+		"@astrojs/sitemap": "^3.0.0",
+		"@astrojs/tailwind": "^5.0.0",
+		"@fontsource-variable/montserrat": "^5.0.9",
+		"@fontsource-variable/mulish": "^5.0.9",
+		"@radix-ui/react-dialog": "^1.0.5",
+		"@types/react": "^18.2.23",
+		"@types/react-dom": "^18.2.8",
+		"astro": "^3.2.0",
+		"astro-compress": "^2.0.15",
+		"astro-robots-txt": "^1.0.0",
+		"autoprefixer": "^10.4.16",
+		"class-variance-authority": "^0.7.0",
+		"clsx": "^2.0.0",
+		"lucide-react": "^0.279.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"swiper": "^10.3.1",
+		"tailwind-merge": "^1.14.0",
+		"tailwindcss": "^3.3.3",
+		"tailwindcss-animate": "^1.0.7"
+	},
+	"devDependencies": {
+		"prettier": "^3.0.3",
+		"prettier-plugin-astro": "^0.12.0",
+		"prettier-plugin-tailwindcss": "^0.5.4"
+	}
 }
