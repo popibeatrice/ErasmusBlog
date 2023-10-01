@@ -28,7 +28,7 @@ const SheetOverlay = React.forwardRef(({ className, ...props }, ref) => (
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
 const sheetVariants = cva(
-	'fixed z-50 overflow-y-auto gap-4 bg-background pt-[123.93px] pb-6 px-10 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500',
+	'fixed z-50 overflow-y-auto gap-4 bg-background pt-[80px] pb-5 px-10 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500',
 	{
 		variants: {
 			side: {
@@ -51,7 +51,7 @@ const SheetContent = React.forwardRef(({ side = 'right', className, children, ..
 		<SheetOverlay />
 		<SheetPrimitive.Content ref={ref} className={cn(sheetVariants({ side }), className)} {...props}>
 			{children}
-			<div className="absolute left-5 right-5 top-0 flex h-[123.93px] items-center justify-between">
+			<div className="absolute left-10 right-5 top-0 flex h-[80px] items-center justify-between">
 				<span className="font-mont text-2xl font-light uppercase underline-offset-2 lg:text-3xl">
 					Menu
 				</span>

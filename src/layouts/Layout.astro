@@ -19,16 +19,11 @@ const { title } = Astro.props
 ---
 
 <style is:global>
-	.nav-shadow {
-		box-shadow: 0px 0.75px 15px #eeeeee;
-	}
-
 	.foot-shadow {
 		box-shadow: 0px 0.75px 15px #eeeeee;
 	}
-
 	.heighty {
-		min-height: calc(100vh - 200px);
+		min-height: calc(100vh - 130px);
 	}
 </style>
 
@@ -44,8 +39,10 @@ const { title } = Astro.props
 	</head>
 	<body class="scroll-smooth bg-white font-mulish">
 		<Sidebar client:load>
-			<a href="/" class="w-20">
-				<Image src={Logo} loading="eager" alt="Erasmus Logo" class="w-full" /></a
+			<a
+				href="/"
+				class="relative rounded-sm font-mont text-2xl ring-offset-background transition-opacity after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-accentOrange after:transition-all after:duration-300 hover:after:scale-x-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 lg:text-3xl"
+				>BITL <span class="font-semibold text-textBlue">Blog</span></a
 			>
 		</Sidebar>
 		<slot />
