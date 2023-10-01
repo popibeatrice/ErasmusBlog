@@ -51,7 +51,7 @@ const SheetContent = React.forwardRef(({ side = 'right', className, children, ..
 		<SheetOverlay />
 		<SheetPrimitive.Content ref={ref} className={cn(sheetVariants({ side }), className)} {...props}>
 			{children}
-			<div className="absolute left-5 right-[5vw] top-0 flex h-[123.93px] items-center justify-between sm:left-10 sm:right-[2.5vw]">
+			<div className="absolute left-5 right-5 top-0 flex h-[123.93px] items-center justify-between">
 				<span className="font-mont text-2xl font-light uppercase underline-offset-2 lg:text-3xl">
 					Menu
 				</span>

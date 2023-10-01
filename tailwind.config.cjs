@@ -18,7 +18,7 @@ module.exports = {
 		extend: {
 			colors: {
 				textOrange: '#CC460C',
-				accentOrange: 'hsl(var(--primary))',
+				accentOrange: '#F97316',
 				textBlue: '#2A8289',
 				accentBlue: '#00BBCC',
 				border: 'hsl(var(--border))',

@@ -1,0 +1,42 @@
+---
+import Objective from './Objective.astro'
+
+import carbonIco from '../assets/carbon-footprint.png'
+import warmingIco from '../assets/global-warming.png'
+import learnIco from '../assets/online-learning.png'
+import comIco from '../assets/talking.png'
+import { Image } from 'astro:assets'
+---
+
+<section
+	id="discover"
+	class="mx-[5%] mt-10 flex flex-col items-center justify-center gap-16 py-6 sm:mx-[10%]"
+>
+	<h2 class="font-mont text-4xl sm:text-5xl xl:text-6xl">Main Objectives</h2>
+	<div class="flex flex-col items-center justify-center gap-8 lg:flex-row">
+		<div class="flex flex-col items-center justify-center gap-8">
+			<Objective
+				title="Helping participants gain valuable insights into the significance of the carbon footprint."
+			>
+				<Image src={carbonIco} alt="BITL Objective" class="w-14 rounded" />
+			</Objective>
+			<Objective
+				title="To provide a platform for the students to showcase their talents and skills"
+			>
+				<Image src={warmingIco} alt="BITL Objective" class="w-14 rounded" />
+			</Objective>
+		</div>
+		<div class="flex flex-col items-center justify-center gap-8">
+			<Objective
+				title="To provide a platform for the students to showcase their talents and skills"
+			>
+				<Image src={comIco} alt="BITL Objective" class="w-14 rounded" />
+			</Objective>
+			<Objective
+				title="To provide a platform for the students to showcase their talents and skills"
+			>
+				<Image src={learnIco} alt="BITL Objective" class="w-14 rounded" />
+			</Objective>
+		</div>
+	</div>
+</section>

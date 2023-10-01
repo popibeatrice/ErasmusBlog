@@ -4,11 +4,18 @@ import { Image } from 'astro:assets'
 import globalWarming from '../assets/global_warming_ilus.webp'
 
 import Layout from '../layouts/Layout.astro'
+import Objectives from '@/components/Objectives.astro'
 ---
+
+<style>
+	.line {
+		background-image: radial-gradient(circle, #00bbcc 28%, #ffffff);
+	}
+</style>
 
 <Layout title="Welcome to Astro.">
 	<main class="min-h-[200vh]">
-		<section class="mx-[5%] mt-[190px] grid grid-cols-1 sm:mx-[10%] lg:grid-cols-2">
+		<section class="heighty mx-[5%] mt-[190px] grid grid-cols-1 sm:mx-[10%] lg:grid-cols-2">
 			<div class="flex animate-show-up flex-col items-start justify-center gap-8 opacity-0">
 				<div class="flex flex-col items-start justify-center gap-3">
 					<h1 class="font-mont text-4xl sm:text-5xl xl:text-6xl">
@@ -23,8 +30,8 @@ import Layout from '../layouts/Layout.astro'
 					</p>
 				</div>
 				<a
-					href="/"
-					class="ml-1 rounded bg-accentOrange px-4 py-2.5 text-lg font-semibold text-white ring-offset-background transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none sm:ml-2 sm:px-5 sm:py-3.5 sm:text-xl lg:text-2xl"
+					href="#discover"
+					class="ml-1 rounded bg-accentOrange px-4 py-2.5 text-lg font-semibold text-white ring-offset-background transition-all duration-300 hover:bg-orange-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none sm:ml-2 sm:px-5 sm:py-3.5 sm:text-xl lg:text-2xl"
 					>Discover</a
 				>
 			</div>
@@ -35,5 +42,7 @@ import Layout from '../layouts/Layout.astro'
 				class="w-full max-w-md animate-show-up justify-self-center opacity-0 lg:max-w-xl lg:justify-self-end 2xl:max-w-2xl"
 			/>
 		</section>
+		<div class="line h-[1.5px] w-full"></div>
+		<Objectives />
 	</main>
 </Layout>

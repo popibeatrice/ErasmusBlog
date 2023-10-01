@@ -1,0 +1,20 @@
+---
+const { title } = Astro.props
+---
+
+<section class="heighty mt-[145px] flex items-center justify-center py-4">
+	<div class="relative flex animate-show-up flex-col items-center justify-center gap-3 px-2">
+		<h1
+			class="font-mont text-4xl uppercase min-[315px]:text-5xl sm:text-7xl sm:tracking-widest lg:text-8xl"
+		>
+			{title}
+		</h1>
+		<span class="max-w-xl px-2 text-center text-lg lg:text-xl"
+			>A brief summery of the impact <span class="font-semibold">{title}</span> had in the <span
+				class="whitespace-normal font-semibold text-textBlue"
+				>Erasmums+ KA220
+			</span>project{' '}
+			 "<span class="whitespace-normal font-semibold text-textOrange">Before It Is Too Late</span>".
+		</span>
+	</div>
+</section>

@@ -8,7 +8,7 @@ import irelandFlag from '../assets/ireland.png'
 
 export default function Sidebar({ children }) {
 	return (
-		<header className="nav-shadow fixed left-0 right-0 top-0 z-10 mx-auto flex items-center justify-between bg-white px-[5vw] py-3 sm:px-[2.5vw]">
+		<header className="nav-shadow fixed left-0 right-0 top-0 z-10 flex items-center justify-between bg-white px-5 py-3">
 			{children}
 			<Sheet>
 				<SheetTrigger className="rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
