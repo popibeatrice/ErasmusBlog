@@ -8,10 +8,7 @@ import comIco from '../assets/talking.png'
 import { Image } from 'astro:assets'
 ---
 
-<section
-	id="discover"
-	class="mx-[5%] mt-10 flex flex-col items-center justify-center gap-16 py-6 sm:mx-[10%]"
->
+<section id="discover" class="mt-10 flex flex-col items-center justify-center gap-16 py-6">
 	<h2 class="font-mont text-4xl sm:text-5xl xl:text-6xl">Main Objectives</h2>
 	<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
 		<Objective
@@ -19,13 +16,19 @@ import { Image } from 'astro:assets'
 		>
 			<Image src={carbonIco} alt="BITL Objective" class="w-14 rounded" />
 		</Objective>
-		<Objective title="To provide a platform for the students to showcase their talents and skills">
+		<Objective
+			title="Assisting participants in gaining valuable insights into the significance of climate change, its impact on our planet, and the urgency of taking action."
+		>
 			<Image src={warmingIco} alt="BITL Objective" class="w-14 rounded" />
 		</Objective>
-		<Objective title="To provide a platform for the students to showcase their talents and skills">
+		<Objective
+			title="Strengthening intercultural dialogue, which is crucial for fostering understanding, respect, and harmony among diverse communities."
+		>
 			<Image src={comIco} alt="BITL Objective" class="w-14 rounded" />
 		</Objective>
-		<Objective title="To provide a platform for the students to showcase their talents and skills">
+		<Objective
+			title="Empowering participants to gain valuable insights into new ways of studying, communicating effectively, and fostering personal growth, emphasizing adaptability and lifelong learning."
+		>
 			<Image src={learnIco} alt="BITL Objective" class="w-14 rounded" />
 		</Objective>
 	</div>

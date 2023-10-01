@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets'
 
-import globalWarming from '../assets/global_warming_ilus.webp'
 import Logo from '../assets/logo.jpg'
 import Layout from '../layouts/Layout.astro'
 import Objectives from '@/components/Objectives.astro'
@@ -14,10 +13,8 @@ import Objectives from '@/components/Objectives.astro'
 </style>
 
 <Layout title="Welcome to Astro.">
-	<main class="min-h-[200vh]">
-		<section
-			class="heighty mx-[5%] mt-[125px] grid grid-cols-1 items-center sm:mx-[10%] lg:grid-cols-2"
-		>
+	<main class="mx-[5%] min-h-[200vh] sm:mx-[10%]">
+		<section class="heighty mt-[125px] grid grid-cols-1 items-center lg:grid-cols-2">
 			<div class="flex animate-show-up flex-col items-start justify-center gap-8 opacity-0">
 				<div class="flex flex-col items-start justify-center gap-3">
 					<h1 class="font-mont text-4xl sm:text-5xl xl:text-6xl">
