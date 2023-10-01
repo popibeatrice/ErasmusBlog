@@ -28,7 +28,7 @@ const SheetOverlay = React.forwardRef(({ className, ...props }, ref) => (
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
 const sheetVariants = cva(
-	'fixed z-50 overflow-y-auto gap-4 bg-background pt-[123.93px] pb-6 px-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500',
+	'fixed z-50 overflow-y-auto gap-4 bg-background pt-[123.93px] pb-6 px-10 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500',
 	{
 		variants: {
 			side: {
@@ -37,7 +37,7 @@ const sheetVariants = cva(
 					'inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom',
 				left: 'inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm',
 				right:
-					'inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm'
+					'inset-y-0 right-0 h-full w-3/4 border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-md'
 			}
 		},
 		defaultVariants: {
@@ -52,7 +52,9 @@ const SheetContent = React.forwardRef(({ side = 'right', className, children, ..
 		<SheetPrimitive.Content ref={ref} className={cn(sheetVariants({ side }), className)} {...props}>
 			{children}
 			<div className="absolute left-5 right-[5vw] top-0 flex h-[123.93px] items-center justify-between sm:left-10 sm:right-[2.5vw]">
-				<span className="text-2xl">Menu</span>
+				<span className="font-mont text-2xl font-light uppercase underline-offset-2 lg:text-3xl">
+					Menu
+				</span>
 				<SheetPrimitive.Close className="rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

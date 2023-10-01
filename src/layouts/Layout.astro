@@ -4,6 +4,8 @@ import '@/styles/globals.css'
 import '@fontsource-variable/mulish'
 import '@fontsource-variable/montserrat'
 
+import { ViewTransitions } from 'astro:transitions'
+
 import Sidebar from '../components/Sidebar'
 import { Image } from 'astro:assets'
 import Logo from '../assets/logo.jpg'
@@ -14,7 +16,12 @@ interface Props {
 const { title } = Astro.props
 ---
 
-<!doctype html>
+<style is:global>
+	.nav-shadow {
+		box-shadow: 0px 0.75px 15px #eeeeee;
+	}
+</style>
+
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -23,17 +30,14 @@ const { title } = Astro.props
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
-	<body class="font-mulish bg-white">
+	<body class="bg-white font-mulish">
 		<Sidebar client:load>
-			<Image src={Logo} loading="eager" alt="Erasmus Logo" class="w-20" />
+			<a href="/" class="w-20">
+				<Image src={Logo} loading="eager" alt="Erasmus Logo" class="w-full" /></a
+			>
 		</Sidebar>
 		<slot />
 	</body>
 </html>
-
-<style is:global>
-	.nav-shadow {
-		box-shadow: 0px 0.75px 15px #eeeeee;
-	}
-</style>
