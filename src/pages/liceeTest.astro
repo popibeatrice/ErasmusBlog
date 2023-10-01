@@ -1,0 +1,29 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import LiceeTab from '../components/LiceeTab'
+import LogoRacovita from '../assets/sigla-ler.jpg'
+import LogoCerchez from '../assets/crigoreBucuresti.jpg'
+import PhotoRacovita from '../assets/emailRacovita.jpg'
+import PhotoCerchez from '../assets/grigoreCerchez.jpg'
+---
+
+<Layout title="totul e doar un test">
+	<div class="min-h-screen"></div>
+	<div class="flex min-h-screen items-center justify-center">
+		<LiceeTab
+			oras1={`Vaslui`}
+			oras2={`Bucharest`}
+			liceu1={`"Emil Racovita" Theoretical HighSchool`}
+			liceu2={`"Grigore Cerchez" Technical HighSchool`}
+			link1={`https://lervs.ro/`}
+			link2={`https://www.grigorecerchez.ro/`}
+			logo1={LogoRacovita.src}
+			logo2={LogoCerchez.src}
+			description1={'The high school prepares its students to become active participants in society, providing them with a comprehensive education and enabling them to choose a career that aligns with their potential. '}
+			description2={'The high school prepares its students to become active participants in society, providing them with a comprehensive education and enabling them to choose a career that aligns with their potential. '}
+			photo1={PhotoRacovita.src}
+			photo2={PhotoCerchez.src}
+			client:load
+		/>
+	</div>
+</Layout>
