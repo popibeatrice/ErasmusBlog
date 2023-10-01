@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets'
 
 import globalWarming from '../assets/global_warming_ilus.webp'
-
+import Logo from '../assets/logo.jpg'
 import Layout from '../layouts/Layout.astro'
 import Objectives from '@/components/Objectives.astro'
 ---
@@ -15,7 +15,9 @@ import Objectives from '@/components/Objectives.astro'
 
 <Layout title="Welcome to Astro.">
 	<main class="min-h-[200vh]">
-		<section class="heighty mx-[5%] mt-[190px] grid grid-cols-1 sm:mx-[10%] lg:grid-cols-2">
+		<section
+			class="heighty mx-[5%] mt-[190px] grid grid-cols-1 items-center sm:mx-[10%] lg:grid-cols-2"
+		>
 			<div class="flex animate-show-up flex-col items-start justify-center gap-8 opacity-0">
 				<div class="flex flex-col items-start justify-center gap-3">
 					<h1 class="font-mont text-4xl sm:text-5xl xl:text-6xl">
@@ -36,10 +38,10 @@ import Objectives from '@/components/Objectives.astro'
 				>
 			</div>
 			<Image
-				src={globalWarming}
+				src={Logo}
 				loading="eager"
 				alt="Global Warming Ilustration"
-				class="w-full max-w-md animate-show-up justify-self-center opacity-0 lg:max-w-xl lg:justify-self-end 2xl:max-w-2xl"
+				class="xs:max-w-xs w-full max-w-[275px] animate-show-up justify-self-center opacity-0 sm:max-w-sm lg:justify-self-end xl:max-w-md 2xl:max-w-lg"
 			/>
 		</section>
 		<div class="line h-[1.5px] w-full"></div>
