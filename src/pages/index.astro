@@ -1,6 +1,10 @@
 ---
 import { Image } from 'astro:assets'
-
+import RomaniaFlag from '../assets/romania.png'
+import IrlandFlag from '../assets/ireland.png'
+import CroatiaFlag from '../assets/croatia.png'
+import PolandFlag from '../assets/poland.png'
+import TurkeyFalg from '../assets/turkey.png'
 import globalWarming from '../assets/global_warming_ilus.webp'
 import Logo from '../assets/logo.jpg'
 import Layout from '../layouts/Layout.astro'
@@ -44,7 +48,44 @@ import Objectives from '@/components/Objectives.astro'
 				class="xs:max-w-xs w-full max-w-[275px] animate-show-up justify-self-center opacity-0 sm:max-w-sm lg:justify-self-end xl:max-w-md 2xl:max-w-lg"
 			/>
 		</section>
-		<div class="line h-[1.5px] w-full"></div>
+		<!-- <div class="line h-[1.5px] w-full"></div> -->
+		<div
+			class="mx-10 flex flex-col items-center justify-center gap-5 sm:mt-8 sm:gap-8 md:mt-0 md:gap-10"
+		>
+			<h3 class="ml-[5%] self-start font-mont text-3xl font-extralight md:text-4xl lg:text-5xl">
+				Partener Counties:
+			</h3>
+			<div
+				class="xs:grid-cols-5 xs:max-w-none m-10 grid w-[90%] max-w-xs grid-cols-2 items-center justify-items-center gap-5 sm:grid-rows-1"
+			>
+				<Image
+					src={IrlandFlag}
+					alt="Irland Flag"
+					class="h-16 w-16 rounded-[50%] shadow-2xl duration-300 hover:scale-110 md:h-20 md:w-20"
+				/>
+				<Image
+					src={RomaniaFlag}
+					alt="Romania Flag"
+					class="h-16 w-16 rounded-[50%] shadow-2xl duration-300 hover:scale-110 md:h-20 md:w-20"
+				/>
+				<Image
+					src={CroatiaFlag}
+					alt="Croatia Flag"
+					class="h-16 w-16 rounded-[50%] shadow-2xl duration-300 hover:scale-110 md:h-20 md:w-20"
+				/>
+				<Image
+					src={PolandFlag}
+					alt="Poland Flag"
+					class="h-16 w-16 rounded-[50%] shadow-2xl duration-300 hover:scale-110 md:h-20 md:w-20"
+				/>
+				<Image
+					src={TurkeyFalg}
+					alt="Turkey Flag"
+					class="h-16 w-16 rounded-[50%] shadow-2xl duration-300 hover:scale-110 md:h-20 md:w-20"
+				/>
+			</div>
+		</div>
+		<!-- <div class="line h-[1.5px] w-full"></div> -->
 		<Objectives />
 	</main>
 </Layout>

@@ -8,11 +8,31 @@ import comIco from '../assets/talking.png'
 import { Image } from 'astro:assets'
 ---
 
-<section
-	id="discover"
-	class="mx-[5%] mt-10 flex flex-col items-center justify-center gap-16 py-6 sm:mx-[10%]"
->
-	<h2 class="font-mont text-4xl sm:text-5xl xl:text-6xl">Main Objectives</h2>
+<section id="discover" class="mx-10 mt-10 flex flex-col items-center justify-center gap-16 py-6">
+	<h2 class="ml-[5%] self-start font-mont text-3xl font-extralight md:text-4xl lg:text-5xl">
+		Main Objectives
+	</h2>
+	<div class="flex w-[80%] items-center justify-evenly">
+		<p class="max-w-sm text-lg">
+			Our collaborative project, driven by partner schools from <span class="font-bold"
+				>Romania</span
+			>, <span class="font-bold">Turkey</span>, <span class="font-bold">Poland</span>, <span
+				class="font-bold">Croatia</span
+			>, and an <span class="font-bold">Irish NGO</span>, focuses on school-based education
+			concerning "Climate Change" and social inclusion.
+		</p>
+		<div class="flex flex-col items-start justify-center gap-5">
+			<p class="font-mont text-xl">We began with a shared commitment to:</p>
+			<ul class="ml-8 list-disc">
+				<li>Understanding the causes and impacts of climate change.</li>
+				<li>Raising climate awareness among participants.</li>
+				<li>Recognizing common social contexts in our regions.</li>
+				<li>Emphasizing the need for climate precautions.</li>
+				<li>Disseminating climate change information widely.</li>
+			</ul>
+		</div>
+	</div>
+
 	<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
 		<Objective
 			title="Helping participants gain valuable insights into the significance of the carbon footprint."
