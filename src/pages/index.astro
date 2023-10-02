@@ -23,7 +23,7 @@ const flags = [RomaniaFlag, IrlandFlag, CroatiaFlag, PolandFlag, TurkeyFalg]
 </style>
 
 <Layout title="Welcome to Astro.">
-	<main class="mx-[5%] mt-[125px] flex flex-col items-center justify-center sm:mx-[10%]">
+	<main class="mx-[5%] mt-[125px] flex flex-col items-center justify-center gap-20 sm:mx-[10%]">
 		<section class="heighty grid grid-cols-1 items-center lg:grid-cols-2 xl:w-[80%]">
 			<div class="flex animate-show-up flex-col items-start justify-center gap-8 opacity-0">
 				<div class="flex flex-col items-start justify-center gap-3">
@@ -52,10 +52,7 @@ const flags = [RomaniaFlag, IrlandFlag, CroatiaFlag, PolandFlag, TurkeyFalg]
 			/>
 		</section>
 		<!-- <div class="line h-[1.5px] w-full"></div> -->
-		<section
-			id="discover"
-			class="flex flex-col items-center justify-center gap-10 sm:mt-8 md:gap-16"
-		>
+		<section id="discover" class="flex flex-col items-center justify-center gap-10 md:gap-16">
 			<h3 class="self-start font-mont text-4xl font-extralight md:text-5xl lg:text-6xl">
 				Partener Countries
 			</h3>
@@ -98,7 +95,7 @@ const flags = [RomaniaFlag, IrlandFlag, CroatiaFlag, PolandFlag, TurkeyFalg]
 			</div>
 		</section>
 		<!-- <div class="line h-[1.5px] w-full"></div> -->
-		<section class="mt-20 flex w-full flex-col items-start justify-start gap-10 md:gap-16">
+		<section class="flex w-full flex-col items-start justify-start gap-10 md:gap-16">
 			<Objectives />
 		</section>
 	</main>
