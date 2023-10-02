@@ -13,7 +13,13 @@ import Layout from '../layouts/Layout.astro'
 
 import Objectives from '@/components/Objectives.astro'
 
-const flags = [RomaniaFlag, IrlandFlag, CroatiaFlag, PolandFlag, TurkeyFalg]
+const flags = [
+	{ flag: RomaniaFlag, country: 'romania' },
+	{ flag: IrlandFlag, country: 'ireland' },
+	{ flag: CroatiaFlag, country: 'croatia' },
+	{ flag: PolandFlag, country: 'poland' },
+	{ flag: TurkeyFalg, country: 'turkey' }
+]
 ---
 
 <style>
@@ -61,11 +67,13 @@ const flags = [RomaniaFlag, IrlandFlag, CroatiaFlag, PolandFlag, TurkeyFalg]
 			>
 				{
 					flags.map((flag) => (
-						<Image
-							src={flag}
-							alt="Flag"
-							class="w-20 rounded-[50%] shadow-lg shadow-neutral-300 transition-all duration-300 hover:scale-110 md:w-24"
-						/>
+						<a href={`/${flag.country}`}>
+							<Image
+								src={flag.flag}
+								alt="Flag"
+								class="w-20 rounded-[50%] shadow-lg shadow-neutral-300 transition-all duration-300 hover:scale-110 md:w-24"
+							/>
+						</a>
 					))
 				}
 			</div>
