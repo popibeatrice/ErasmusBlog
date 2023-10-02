@@ -31,17 +31,17 @@ export default function Sidebar({ children }) {
 				<SheetContent>
 					<nav className="mt-5 flex w-full flex-col items-start justify-start gap-10">
 						<SidebarSection title="LTT Activities">
-							<Country name="Croatia" flag={croatiaFlag.src} />
-							<Country name="Turkey" flag={turkFlag.src} />
-							<Country name="Poland" flag={polandFlag.src} />
+							<Country name="Croatia" route="/croatia" flag={croatiaFlag.src} />
+							<Country name="Turkey" route="/turkey" flag={turkFlag.src} />
+							<Country name="Poland" route="/poland" flag={polandFlag.src} />
 						</SidebarSection>
 						<SidebarSection title="TP Meetings">
-							<Country name="Ireland" flag={irelandFlag.src} />
-							<Country name="Romania" flag={romaniaFlag.src} />
+							<Country name="Ireland" route="/ireland" flag={irelandFlag.src} />
+							<Country name="Romania" route="/romania" flag={romaniaFlag.src} />
 						</SidebarSection>
 						<SidebarSection title="Virtual Mobilities">
-							<Country name="Romania" flag={romaniaFlag.src} />
-							<Country name="Turkey" flag={turkFlag.src} />
+							<Country name="Romania" route="/romania" flag={romaniaFlag.src} />
+							<Country name="Turkey" route="/turkey" flag={turkFlag.src} />
 						</SidebarSection>
 					</nav>
 				</SheetContent>
@@ -59,11 +59,11 @@ function SidebarSection({ title, children }) {
 	)
 }
 
-function Country({ name, flag }) {
+function Country({ name, route, flag }) {
 	return (
 		<li>
 			<a
-				href=""
+				href={route}
 				className="flex items-center  justify-start gap-4 rounded-sm ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
 			>
 				<img className="w-8" src={flag} alt={`${name} flag`} decoding="async" loading="lazy" />
