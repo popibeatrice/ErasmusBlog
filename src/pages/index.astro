@@ -1,9 +1,19 @@
 ---
 import { Image } from 'astro:assets'
 
+import RomaniaFlag from '../assets/romania.png'
+import IrlandFlag from '../assets/ireland.png'
+import CroatiaFlag from '../assets/croatia.png'
+import PolandFlag from '../assets/poland.png'
+import TurkeyFalg from '../assets/turkey.png'
+
 import Logo from '../assets/logo.jpg'
+
 import Layout from '../layouts/Layout.astro'
+
 import Objectives from '@/components/Objectives.astro'
+
+const flags = [RomaniaFlag, IrlandFlag, CroatiaFlag, PolandFlag, TurkeyFalg]
 ---
 
 <style>
@@ -13,11 +23,11 @@ import Objectives from '@/components/Objectives.astro'
 </style>
 
 <Layout title="Welcome to Astro.">
-	<main class="mx-[5%] min-h-[200vh] sm:mx-[10%]">
-		<section class="heighty mt-[125px] grid grid-cols-1 items-center lg:grid-cols-2">
+	<main class="mx-[5%] mt-[125px] flex flex-col gap-20 sm:mx-[10%]">
+		<section class="heighty grid grid-cols-1 items-center lg:grid-cols-2">
 			<div class="flex animate-show-up flex-col items-start justify-center gap-8 opacity-0">
 				<div class="flex flex-col items-start justify-center gap-3">
-					<h1 class="font-mont text-4xl sm:text-5xl xl:text-6xl">
+					<h1 class="font-mont text-4xl md:text-5xl lg:text-6xl">
 						<span class="font-semibold text-textBlue">Before</span> It's <span
 							class="whitespace-nowrap font-semibold text-textOrange">Too Late</span
 						>
@@ -38,10 +48,55 @@ import Objectives from '@/components/Objectives.astro'
 				src={Logo}
 				loading="eager"
 				alt="Global Warming Ilustration"
-				class="xs:max-w-xs w-full max-w-[275px] animate-show-up justify-self-center opacity-0 sm:max-w-sm lg:justify-self-end xl:max-w-md 2xl:max-w-lg"
+				class="xs:max-w-xs w-full max-w-[275px] animate-show-up justify-self-center opacity-0 sm:max-w-sm lg:justify-self-end 2xl:max-w-md"
 			/>
 		</section>
-		<div class="line h-[1.5px] w-full"></div>
-		<Objectives />
+		<!-- <div class="line h-[1.5px] w-full"></div> -->
+		<section class="flex flex-col items-center justify-center gap-10 sm:mt-8 md:gap-16">
+			<h3 class="self-start font-mont text-4xl font-extralight md:text-5xl lg:text-6xl">
+				Partener Countries
+			</h3>
+			<div
+				class="grid w-full grid-cols-1 items-center justify-items-center gap-20 md:grid-cols-5 md:gap-14"
+			>
+				{
+					flags.map((flag) => (
+						<Image
+							src={flag}
+							alt="Flag"
+							class="w-24 rounded-[50%] shadow-lg shadow-neutral-300 transition-all duration-300 hover:scale-110"
+						/>
+					))
+				}
+			</div>
+			<div class="flex w-full flex-col items-start justify-start">
+				<p class="text-lg">
+					Welcome to our collaborative <span class="font-bold text-textBlue">Erasmus+</span>
+					 project, a joint effort driven by partner schools in <span class="font-bold"
+						>Romania</span
+					>, <span class="font-bold">Turkey</span>, <span class="font-bold">Poland</span>, <span
+						class="font-bold">Croatia</span
+					>, and an <span class="font-bold">Irish NGO</span>. Our project centers on school-based
+					education, focusing on "<span class="whitespace-nowrap font-bold text-textOrange"
+						>Climate Change</span
+					>" and social inclusion. <br /> At the core of our initiative lies a shared commitment: <span
+						class="font-bold"
+						>We delve into understanding the intricate causes and far-reaching impacts of climate
+						change</span
+					>. <br />
+					 By raising <span class="font-bold text-textBlue">awareness</span> among participants, we
+					foster a deep understanding of the urgent need for climate precautions. Our project
+					acknowledges and explores the common social contexts in our diverse regions. Additionally,
+					we emphasize the dissemination of vital climate change information far and wide. Together,
+					we work towards a <span class="whitespace-nowrap font-bold text-textBlue"
+						>sustainable future</span
+					>, promoting knowledge, awareness, and inclusivity.
+				</p>
+			</div>
+		</section>
+		<!-- <div class="line h-[1.5px] w-full"></div> -->
+		<section id="discover" class="flex w-full flex-col items-start justify-start gap-10 md:gap-16">
+			<Objectives />
+		</section>
 	</main>
 </Layout>
