@@ -31,8 +31,10 @@ const flags = [
 	}
 </style>
 
-<Layout title="Welcome to Astro.">
-	<main class="mx-[5%] mt-[125px] flex flex-col items-center justify-center gap-20 sm:mx-[10%]">
+<Layout title="BITL Blog | Home">
+	<main
+		class="mx-[5%] mt-[125px] flex flex-col items-center justify-center gap-20 sm:mx-[10%] lg:gap-36"
+	>
 		<section class="heighty grid grid-cols-1 items-center lg:grid-cols-2 xl:w-[80%]">
 			<div class="flex animate-show-up flex-col items-start justify-center gap-8 opacity-0">
 				<div class="flex flex-col items-start justify-center gap-3">
@@ -139,7 +141,7 @@ const flags = [
 				photo={virtualPhoto.src}
 				order="normal"
 				title="Virtual Meetings"
-				activity="virtual meetings"
+				activity="virtual meeting"
 				description="Through video conferencing, presentations, interactive discussions, and shared resources, we connect and work together seamlessly, breaking down geographical barriers to  to propel our project towards successful realization."
 				countries={[
 					{ flag: RomaniaFlag, country: 'romania' },

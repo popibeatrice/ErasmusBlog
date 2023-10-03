@@ -1,0 +1,26 @@
+---
+import CountryLand from '@/components/CountryLand.astro'
+import HighPrez from '@/components/HighPrez'
+import Layout from '@/layouts/Layout.astro'
+
+import logoRac from '../assets/sigla-ler.jpg'
+import imgRac from '../assets/emailRacovita.jpg'
+import logoBuc from '../assets/crigoreBucuresti.jpg'
+import imgBuc from '../assets/grigoreCerchez.jpg'
+import SliderforDays from '@/components/SliderforDays'
+---
+
+<Layout title="BITL Vlog | Romania">
+	<main class="">
+		<CountryLand title="Romania" />
+		<HighPrez
+			country="Romania"
+			schools={[
+				{ city: 'Vaslui', name: '"Emil Racovita" HighSchool', logo: logoRac, img: imgRac },
+				{ city: 'Bucuresti', name: '"Grigore Cerchez" HighSchool', logo: logoBuc, img: imgBuc }
+			]}
+			client:load
+		/>
+		<SliderforDays client:load />
+	</main>
+</Layout>

@@ -1,0 +1,21 @@
+---
+import CountryLand from '@/components/CountryLand.astro'
+import HighPrez from '@/components/HighPrez'
+import Layout from '@/layouts/Layout.astro'
+
+import logoRac from '../assets/sigla-ler.jpg'
+import imgRac from '../assets/emailRacovita.jpg'
+import logoBuc from '../assets/crigoreBucuresti.jpg'
+import imgBuc from '../assets/grigoreCerchez.jpg'
+---
+
+<Layout title="BITL Vlog | Poland">
+	<CountryLand title="Poland" />
+	<HighPrez
+		country="Poland"
+		schools={[
+			{ city: 'Tarnow', name: '"Adama Michiewicza" HighSchool', logo: logoRac, img: imgRac }
+		]}
+		client:load
+	/>
+</Layout>

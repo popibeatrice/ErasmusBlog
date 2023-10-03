@@ -2,7 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 function HighPrez({ schools, country = 'Romania' }) {
 	return (
-		<section className="heighty mt-[125px] flex flex-col items-center justify-start gap-10">
+		<section className="heighty mx-[5%] mb-20 flex flex-col items-center justify-start gap-10 sm:mx-[10%]">
 			<h2 className="text-center font-mont text-3xl sm:text-5xl xl:text-6xl">
 				Partner Schools from <br /> <span className="font-bold">{country}</span>
 			</h2>
@@ -22,8 +22,8 @@ function HighPrez({ schools, country = 'Romania' }) {
 					))}
 				</TabsList>
 				{schools.map((school) => (
-					<TabsContent className="mt-5 rounded-lg border" key={school.name} value={school.city}>
-						<article className="flex max-w-5xl flex-col items-start justify-start gap-8 px-3 py-4 shadow-lg sm:px-5 sm:py-7 lg:px-12 lg:py-14">
+					<TabsContent className=" " key={school.name} value={school.city}>
+						<article className="mx-auto mt-5 flex w-[95vw] max-w-3xl flex-col items-start justify-start gap-8 rounded-lg border px-3 py-4 shadow-lg sm:px-5 sm:py-7 lg:px-12 lg:py-14">
 							<div className="flex flex-col items-start justify-start gap-4">
 								<div className="flex flex-col items-center justify-center gap-3 self-center min-[375px]:flex-row min-[375px]:self-start">
 									<img
@@ -46,7 +46,7 @@ function HighPrez({ schools, country = 'Romania' }) {
 							<img
 								src={school.img.src}
 								loading="eager"
-								className="w-full max-w-xl self-center rounded-xl object-cover object-center"
+								className="h-[400px] w-full self-center rounded-xl object-cover object-center"
 								decoding="async"
 								alt={school.name}
 							/>
