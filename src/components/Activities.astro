@@ -1,0 +1,63 @@
+---
+import RomaniaFlag from '../assets/romania.png'
+import IrlandFlag from '../assets/ireland.png'
+import CroatiaFlag from '../assets/croatia.png'
+import PolandFlag from '../assets/poland.png'
+import TurkeyFalg from '../assets/turkey.png'
+import { Image } from 'astro:assets'
+const { photo, order, title, description, activity, countries } = Astro.props
+---
+
+<div
+	class={order === 'normal'
+		? 'flex flex-col items-center justify-center gap-10 lg:flex-row lg:gap-20'
+		: 'flex flex-col items-center justify-center gap-10 lg:flex-row-reverse lg:gap-20'}
+>
+	<h3 class="font-mont text-4xl font-light text-textBlue xxs:text-5xl lg:hidden">LTT activities</h3>
+	<div
+		style={{ backgroundImage: `url(${photo})` }}
+		class={title === 'Virtual Meetings'
+			? 'relative h-[400px] w-full max-w-[500px] rounded bg-cover bg-right bg-no-repeat shadow-2xl lg:h-[550px] lg:w-[400px]'
+			: 'relative h-[400px] w-full max-w-[500px] rounded bg-cover bg-center bg-no-repeat shadow-2xl lg:h-[550px] lg:w-[400px]'}
+	>
+	</div>
+	<div
+		class={order === 'normal'
+			? 'xxs:items-start flex flex-col items-center justify-center gap-10'
+			: 'flex flex-col items-center justify-center gap-10'}
+	>
+		<h3
+			class="hidden font-mont text-4xl font-light text-textBlue xxs:text-5xl lg:block lg:text-6xl"
+		>
+			{title}
+		</h3>
+		<p class={order === 'normal' ? 'max-w-sm md:text-lg' : 'max-w-sm text-center md:text-lg'}>
+			{description}
+		</p>
+		<div class="flex w-full flex-col items-center justify-center gap-8 xs:items-start">
+			<h4
+				class={order === 'normal'
+					? 'text-xl max-w-md font-semibold'
+					: 'text-xl max-w-md font-semibold text-center'}
+			>
+				Click the flags below to see how each {activity} unfolded:
+			</h4>
+			<div class="flex flex-col items-start justify-center gap-10 self-center xs:flex-row">
+				{
+					countries.map((country) => (
+						<div class="flex items-center justify-center gap-5">
+							<a href={`/${country.country}`}>
+								<Image
+									src={country.flag}
+									alt={country.country}
+									class="w-10 rounded-[50%] shadow-2xl duration-300 hover:scale-110 xxs:w-12"
+								/>
+							</a>
+							<p class="font-medium capitalize xxs:text-lg xs:hidden">{country.country}</p>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</div>

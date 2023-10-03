@@ -6,8 +6,11 @@ import IrlandFlag from '../assets/ireland.png'
 import CroatiaFlag from '../assets/croatia.png'
 import PolandFlag from '../assets/poland.png'
 import TurkeyFalg from '../assets/turkey.png'
-
+import LTTAPhoto from '../assets/workshop.jpg'
+import LTMPhoto from '../assets/LTM.jpg'
+import virtualPhoto from '../assets/virualMeet.jpg'
 import Logo from '../assets/logo.jpg'
+import Activities from '@/components/Activities.astro'
 
 import Layout from '../layouts/Layout.astro'
 
@@ -105,6 +108,44 @@ const flags = [
 		<!-- <div class="line h-[1.5px] w-full"></div> -->
 		<section class="flex w-full flex-col items-start justify-start gap-10 md:gap-16">
 			<Objectives />
+		</section>
+		<section class="flex min-h-screen w-full flex-col justify-center gap-32 lg:gap-52">
+			<Activities
+				photo={LTTAPhoto.src}
+				order="normal"
+				title="LTT Activities"
+				activity="LTTA"
+				description="LTT activities are the educational components of an Erasmus project, including workshops, seminars, and training sessions. They promote cross-cultural learning and skill development among participants, enhancing their competencies and fostering international cooperation."
+				countries={[
+					{ flag: RomaniaFlag, country: 'romania' },
+					{ flag: CroatiaFlag, country: 'croatia' },
+					{ flag: PolandFlag, country: 'poland' },
+					{ flag: TurkeyFalg, country: 'turkey' }
+				]}
+			/>
+			<Activities
+				photo={LTMPhoto.src}
+				order="reverse"
+				title="LT Meetings"
+				activity="LTM"
+				description="LTM meetings are essential coordination gatherings within an Erasmus project. They bring project partners together to discuss progress, plan future activities, and ensure compliance with program guidelines. LTM meetings facilitate effective communication and collaboration among stakeholders, contributing to the project's success."
+				countries={[
+					{ flag: RomaniaFlag, country: 'romania' },
+					{ flag: IrlandFlag, country: 'ireland' },
+					{ flag: PolandFlag, country: 'poland' }
+				]}
+			/>
+			<Activities
+				photo={virtualPhoto.src}
+				order="normal"
+				title="Virtual Meetings"
+				activity="virtual meetings"
+				description="Through video conferencing, presentations, interactive discussions, and shared resources, we connect and work together seamlessly, breaking down geographical barriers to  to propel our project towards successful realization."
+				countries={[
+					{ flag: RomaniaFlag, country: 'romania' },
+					{ flag: TurkeyFalg, country: 'turkey' }
+				]}
+			/>
 		</section>
 	</main>
 </Layout>
