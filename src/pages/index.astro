@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets'
-
+import euLogo from '../assets/Erasmusfunded.png'
 import RomaniaFlag from '../assets/romania.png'
 import IrlandFlag from '../assets/ireland.png'
 import CroatiaFlag from '../assets/croatia.png'
@@ -29,11 +29,14 @@ const flags = [
 	.line {
 		background-image: radial-gradient(circle, #00bbcc 28%, #ffffff);
 	}
+	.heighty {
+		min-height: calc(100vh - 180px);
+	}
 </style>
 
 <Layout title="Welcome to Astro.">
 	<main class="mx-[5%] mt-[125px] flex flex-col items-center justify-center gap-20 sm:mx-[10%]">
-		<section class="heighty grid grid-cols-1 items-center lg:grid-cols-2 xl:w-[80%]">
+		<section class="heighty relative grid grid-cols-1 items-center lg:grid-cols-2 xl:w-[80%]">
 			<div class="flex animate-show-up flex-col items-start justify-center gap-8 opacity-0">
 				<div class="flex flex-col items-start justify-center gap-3">
 					<h1 class="font-mont text-4xl md:text-5xl lg:text-6xl">
@@ -45,6 +48,11 @@ const flags = [
 						This is our <span class="font-bold">only</span> planet, we have no other home. Our world
 						has aged and its <span class="font-bold">burden</span> has become heavier. We don't have
 						time to linger, we have to do <span class="font-bold">something</span>.
+					</p>
+					<p class="ml-1 font-bold sm:ml-2 sm:text-lg">
+						Project number: <span class="font-mont font-semibold text-textBlue sm:font-bold"
+							>2021-1-RO01-KA220-SCH-000032488</span
+						>
 					</p>
 				</div>
 				<a
@@ -58,6 +66,11 @@ const flags = [
 				loading="eager"
 				alt="Global Warming Ilustration"
 				class="w-full max-w-[275px] animate-show-up self-start justify-self-center opacity-0 xs:max-w-xs sm:max-w-sm lg:self-auto lg:justify-self-end 2xl:max-w-md"
+			/>
+			<Image
+				class="funded absolute -bottom-[2%] hidden w-64 lg:-left-[10%] lg:block xl:-left-[25%]"
+				src={euLogo}
+				alt="Erasmus funded"
 			/>
 		</section>
 		<!-- <div class="line h-[1.5px] w-full"></div> -->
