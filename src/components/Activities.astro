@@ -1,9 +1,4 @@
 ---
-import RomaniaFlag from '../assets/romania.png'
-import IrlandFlag from '../assets/ireland.png'
-import CroatiaFlag from '../assets/croatia.png'
-import PolandFlag from '../assets/poland.png'
-import TurkeyFalg from '../assets/turkey.png'
 import { Image } from 'astro:assets'
 const { photo, order, title, description, activity, countries } = Astro.props
 ---
@@ -40,7 +35,8 @@ const { photo, order, title, description, activity, countries } = Astro.props
 					? 'text-xl max-w-md font-semibold'
 					: 'text-xl max-w-md font-semibold text-center'}
 			>
-				Click the flags below to see how each {activity} unfolded:
+				Click the flags below to see how each <span class="font-bold text-textBlue">{activity}</span
+				> unfolded:
 			</h4>
 			<div class="flex flex-col items-start justify-center gap-10 self-center xs:flex-row">
 				{
