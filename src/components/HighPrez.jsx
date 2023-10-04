@@ -37,11 +37,18 @@ function HighPrez({ schools, country = 'Romania' }) {
 										{school.name}
 									</h3>
 								</div>
-								<p className="max-w-lg lg:text-lg">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, repudiandae,
-									repellendus cum nobis fuga laborum vero animi, nulla minima adipisci suscipit
-									iste? Officia, possimus. Laudantium dignissimos et nulla quisquam at?
-								</p>
+								<p className="max-w-2xl lg:text-lg">{school.descp}</p>
+								<span className="max-w-lg lg:text-lg">
+									Explore further details on the{' '}
+									<a
+										className="font-bold text-textBlue underline underline-offset-4 transition-all duration-300 hover:font-extrabold"
+										target="_blank"
+										href={school.link}
+									>
+										school's website
+									</a>
+									.
+								</span>
 							</div>
 							<img
 								src={school.img.src}
