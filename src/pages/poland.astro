@@ -3,10 +3,8 @@ import CountryLand from '@/components/CountryLand.astro'
 import HighPrez from '@/components/HighPrez'
 import Layout from '@/layouts/Layout.astro'
 
-import logoRac from '../assets/sigla-ler.jpg'
-import imgRac from '../assets/emailRacovita.jpg'
-import logoBuc from '../assets/crigoreBucuresti.jpg'
-import imgBuc from '../assets/grigoreCerchez.jpg'
+import polandLogo from '../assets/polandSchool_logo.png'
+import polandImg from '../assets/polandSchool_img.jpg'
 ---
 
 <Layout title="BITL Vlog | Poland">
@@ -14,7 +12,15 @@ import imgBuc from '../assets/grigoreCerchez.jpg'
 	<HighPrez
 		country="Poland"
 		schools={[
-			{ city: 'Tarnow', name: '"Adama Michiewicza" HighSchool', logo: logoRac, img: imgRac }
+			{
+				city: 'Tarnow',
+				name: '"III Liceum Ogólnokształcące im. Adama Mickiewicza w Tarnowie" HighSchool',
+				logo: polandLogo,
+				img: polandImg,
+				link: 'https://www.iii-lo.tarnow.pl/',
+				descp:
+					'The III Liceum Ogólnokształcące im. Adama Mickiewicza, located in Tarnów, Poland, is a prominent general education high school named after the famous Polish Romantic poet Adam Mickiewicz. Established with a rich history, the school has consistently maintained high academic standards and a reputation for excellence in education. Known for its rigorous curriculum and dedicated teaching staff, the school emphasizes a holistic approach to education, fostering both academic achievement and personal development among its students. With a focus on intellectual growth, creativity, and critical thinking, the III Liceum Ogólnokształcące prepares students for higher education and successful careers.'
+			}
 		]}
 		client:load
 	/>

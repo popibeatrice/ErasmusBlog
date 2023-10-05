@@ -3,10 +3,9 @@ import CountryLand from '@/components/CountryLand.astro'
 import HighPrez from '@/components/HighPrez'
 import Layout from '@/layouts/Layout.astro'
 
-import logoRac from '../assets/sigla-ler.jpg'
-import imgRac from '../assets/emailRacovita.jpg'
-import logoBuc from '../assets/crigoreBucuresti.jpg'
-import imgBuc from '../assets/grigoreCerchez.jpg'
+import nazLogo from '../assets/nazili_logo.png'
+import nazImg from '../assets/nazili_img.jpg'
+import bursaImg from '../assets/bursa_img.jpg'
 ---
 
 <Layout title="BITL Vlog | Turkey">
@@ -14,12 +13,23 @@ import imgBuc from '../assets/grigoreCerchez.jpg'
 	<HighPrez
 		country="Turkey"
 		schools={[
-			{ city: 'Nazilli', name: '"Nazilli Anadolu" HighSchool', logo: logoRac, img: imgRac },
+			{
+				city: 'Nazilli',
+				name: '"Nazilli Anadolu" HighSchool',
+				logo: nazLogo,
+				img: nazImg,
+				link: 'https://nal.meb.k12.tr/',
+				descp:
+					'Empowering Self-Learners. Guiding Career-Driven Individuals. Achieving 100% Success in National University Entrance Exams. Cultivating Knowledgeable, Cultured, and Respectful Students. Encouraging Analytical, Creative, and Critical Thinkers. Fostering Compassionate, Respectful, and Project-Oriented Students. Developing Students Who Can Critically Read and Write. Instilling a Love for Science, Art, and Philosophy. Inspiring Innovation and Adaptability. Creating Leaders for Tomorrow. Making Our School a Beacon of Excellence in Our City and Nation.'
+			},
 			{
 				city: 'Bursa',
 				name: '"BTSO ALI OSMAN SONMEZ SOSYAL BILIMLER" HighSchool',
-				logo: logoBuc,
-				img: imgBuc
+				logo: nazLogo,
+				img: bursaImg,
+				link: 'https://bsbl.meb.k12.tr/',
+				descp:
+					'Our mission is to create a modern educational institution aligned with national objectives. We nurture students who integrate past, present, and future knowledge, constantly improve, and address societal needs. Our aim is to shape proactive, innovative, and socially conscious individuals. We strive to be a preferred choice, bridging local and universal perspectives.'
 			}
 		]}
 		client:load

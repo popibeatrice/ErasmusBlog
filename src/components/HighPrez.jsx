@@ -23,7 +23,7 @@ function HighPrez({ schools, country = 'Romania' }) {
 				</TabsList>
 				{schools.map((school) => (
 					<TabsContent className=" " key={school.name} value={school.city}>
-						<article className="mx-auto mt-5 flex w-[95vw] max-w-3xl flex-col items-start justify-start gap-8 rounded-lg border px-3 py-4 shadow-lg sm:px-5 sm:py-7 lg:px-12 lg:py-14">
+						<article className="mx-auto mt-5 flex w-[95vw] max-w-5xl flex-col items-start justify-start gap-8 rounded-lg border px-3 py-4 shadow-lg sm:px-5 sm:py-7 lg:px-12 lg:py-14">
 							<div className="flex flex-col items-start justify-start gap-4">
 								<div className="flex flex-col items-center justify-center gap-3 self-center min-[375px]:flex-row min-[375px]:self-start">
 									<img
@@ -37,7 +37,7 @@ function HighPrez({ schools, country = 'Romania' }) {
 										{school.name}
 									</h3>
 								</div>
-								<p className="max-w-2xl lg:text-lg">{school.descp}</p>
+								<p className="max-w-4xl lg:text-lg">{school.descp}</p>
 								<span className="max-w-lg lg:text-lg">
 									Explore further details on the{' '}
 									<a
@@ -53,7 +53,7 @@ function HighPrez({ schools, country = 'Romania' }) {
 							<img
 								src={school.img.src}
 								loading="eager"
-								className="h-[400px] w-full self-center rounded-xl object-cover object-center"
+								className="h-[450px] w-full self-center rounded-xl object-cover object-center"
 								decoding="async"
 								alt={school.name}
 							/>
