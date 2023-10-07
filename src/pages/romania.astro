@@ -1,41 +1,77 @@
 ---
+import { Image } from 'astro:assets'
+
 import CountryLand from '@/components/CountryLand.astro'
 import HighPrez from '@/components/HighPrez'
 import Layout from '@/layouts/Layout.astro'
+
+import BasicMeeting from '../components/BasicMeeting'
 
 import logoRac from '../assets/sigla-ler.jpg'
 import imgRac from '../assets/emailRacovita.jpg'
 import logoBuc from '../assets/crigoreBucuresti.jpg'
 import imgBuc from '../assets/grigoreCerchez.jpg'
-import SliderforDays from '@/components/SliderforDays'
+
+import TPMBuc1 from '../assets/tpmBucuresti1.jpg'
+import TPMBuc2 from '../assets/tpmBucuresti2.jpg'
+import TPMBuc3 from '../assets/tpmBucuresti3.jpg'
+import RomaniaFlag from '../assets/romania.png'
+import VMTurcalet1 from '../assets/vmTurcaleti.jpg'
+const VMPhotos = [VMTurcalet1]
+const TPMPhotos = [TPMBuc1, TPMBuc2, TPMBuc3]
 ---
 
 <Layout title="BITL Vlog | Romania">
-	<main class="">
-		<CountryLand title="Romania" />
-		<HighPrez
-			country="Romania"
-			schools={[
-				{
-					city: 'Vaslui',
-					name: '"Emil Racovita" HighSchool',
-					logo: logoRac,
-					img: imgRac,
-					link: 'https://lervs.ro/',
-					descp:
-						'Founded in 1978, it is committed to providing students with a holistic and comprehensive education. We aim for our students to become active participants in society, benefitting from a well-rounded learning experience through both formal and non-formal methods, preparing them for a successful career according to their potential. With a tradition of over 35 years, our school promotes a focus on excellence and respect for traditional and European values.'
-				},
-				{
-					city: 'Bucuresti',
-					name: '"Grigore Cerchez" HighSchool',
-					logo: logoBuc,
-					img: imgBuc,
-					link: 'https://www.grigorecerchez.ro/',
-					descp:
-						'Founded in 1908 by Ecaterina and Emanoil Pache Protopopescu, the school building later transformed into the "Grigore Cerchez" Industrial School. It was owned by the Chamber of Commerce and Industry from 1926, hosting a School of Arts and Crafts until the communist regime. The technical focus persisted, evolving into the "Tudor Vladimirescu" Vocational School until 1976. In that year, the Industrial High School "Autobuzul" was established. In 1998, the school was renamed "Grigore Cerchez" in honor of the architect. Finally, from September 1, 2009, it became the "Grigore Cerchez Technological College."'
-				}
-			]}
-			client:load
-		/>
-	</main>
+	<CountryLand title="Romania" />
+	<HighPrez
+		country="Romania"
+		schools={[
+			{
+				city: 'Vaslui',
+				name: '"Emil Racovita" HighSchool',
+				logo: logoRac,
+				img: imgRac,
+				link: 'https://lervs.ro/',
+				descp:
+					'Founded in 1978, it is committed to providing students with a holistic and comprehensive education. We aim for our students to become active participants in society, benefitting from a well-rounded learning experience through both formal and non-formal methods, preparing them for a successful career according to their potential. With a tradition of over 35 years, our school promotes a focus on excellence and respect for traditional and European values.'
+			},
+			{
+				city: 'Bucuresti',
+				name: '"Grigore Cerchez" HighSchool',
+				logo: logoBuc,
+				img: imgBuc,
+				link: 'https://www.grigorecerchez.ro/',
+				descp:
+					'Founded in 1908 by Ecaterina and Emanoil Pache Protopopescu, the school building later transformed into the "Grigore Cerchez" Industrial School. It was owned by the Chamber of Commerce and Industry from 1926, hosting a School of Arts and Crafts until the communist regime. The technical focus persisted, evolving into the "Tudor Vladimirescu" Vocational School until 1976. In that year, the Industrial High School "Autobuzul" was established. In 1998, the school was renamed "Grigore Cerchez" in honor of the architect. Finally, from September 1, 2009, it became the "Grigore Cerchez Technological College."'
+			}
+		]}
+		client:load
+	/>
+	<BasicMeeting flag={RomaniaFlag} title="TP Meeting" activityPhotos={TPMPhotos} client:load>
+		Erasmus+ KA220 project "Before It Is Too Late" has started its mobilities with the first
+		transnational meeting that was carried out in the coordinator country,{' '}
+		<span class="text-lg font-semibold text-textBlue lg:text-xl">Romania</span>,{' '}
+		<span class="text-lg font-semibold text-textBlue lg:text-xl">Bucharest</span>, with the
+		participants from all the partner countries on <span class="text-textOrange">June 9 and 10</span
+		>. The meeting lasted for two days in the host school of{' '}
+		<span class="text-textBlue">Grigore Cerchez</span>. After the presentations of all partner
+		schools/institutions, the following LTT and TPM mobilities were determined and the following
+		project activities were negotiated. We were glad to be hosted in Bucharest and look forward to
+		meeting again!
+	</BasicMeeting>
+	<BasicMeeting flag={RomaniaFlag} title="Virtual Meeting" activityPhotos={VMPhotos} client:load>
+		The Erasmus+ KA220 project "BEFORE IT IS TOO LATE" held its first virtual mobility event on <span
+			class="text-textOrange">May 23rd</span
+		>, <span class="text-textOrange">2023</span>, in coordination with <span class="text-textOrange"
+			>Technological College "Grigore Cerchez"</span
+		> in <span class="text-lg font-semibold text-textBlue lg:text-xl">Bucharest</span>, <span
+			class="text-lg font-semibold text-textBlue lg:text-xl">Romania</span
+		>. Partner schools participated in an online competition to develop a business plan for a
+		recycled products/bio products/natural products company. The event helped students develop their
+		entrepreneurial skills and learn about the market economy. Students developed business plans
+		that capitalized on the opportunities available in their communities, collaborated to create
+		marketing products, used basic concepts specific to recycled products/bio products/natural
+		products, and simulated the internal processes carried out in a real company and its relations
+		with other companies and institutions.
+	</BasicMeeting>
 </Layout>

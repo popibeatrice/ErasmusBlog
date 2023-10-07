@@ -1,0 +1,31 @@
+---
+import CountryLand from '@/components/CountryLand.astro'
+import Layout from '@/layouts/Layout.astro'
+
+import BasicMeeting from '@/components/BasicMeeting'
+
+import IrelandFlag from '../assets/ireland.png'
+import TPMIreland1 from '../assets/tpmIreland1.jpg'
+import TPMIreland2 from '../assets/tpmIreland2.jpg'
+import TPMIreland3 from '../assets/tpmIreland3.jpg'
+
+const TPMPhotos = [TPMIreland1, TPMIreland2, TPMIreland3]
+---
+
+<Layout title="BITL Vlog | Ireland">
+	<CountryLand title="Ireland" />
+	<BasicMeeting flag={IrelandFlag} title="TP Meeting" activityPhotos={TPMPhotos} client:load>
+		The second TPM (Transnational Project Meeting) of the project took place in <span
+			class="text-lg font-semibold text-textBlue lg:text-xl">Dublin</span
+		>,
+
+		<span class="text-lg font-semibold text-textBlue lg:text-xl">Ireland</span>, hosted by I&F
+		Education Limited. Teachers from Romania, Croatia, Poland, and Türkiye attended the meeting. The
+		meeting included the review of the first TPM in Romania and the C1 meeting in Nazilli, Türkiye.
+		Moreover, dissemination plans and the distribution of duties were decided. Partners of the
+		project also agreed on the planning of future activities and project management and
+		implementation. The meeting ended with the presentation of the certificates and a farewell
+		dinner. Thank you to the host institution and all participating teachers. Hope to see you in the
+		following meetings.
+	</BasicMeeting>
+</Layout>
