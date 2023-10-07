@@ -5,6 +5,14 @@ import Layout from '@/layouts/Layout.astro'
 
 import polandLogo from '../assets/polandSchool_logo.png'
 import polandImg from '../assets/polandSchool_img.jpg'
+
+import BasicMeeting from '@/components/BasicMeeting'
+import PolandFlag from '../assets/poland.png'
+import TPMPoland1 from '../assets/tpmPoland1.jpg'
+import TPMPoland2 from '../assets/tpmPoland2.jpg'
+import TPMPoland4 from '../assets/tpmPoland4.jpg'
+
+const TPMPhotos = [TPMPoland4, TPMPoland1, TPMPoland2]
 ---
 
 <Layout title="BITL Vlog | Poland">
@@ -24,4 +32,17 @@ import polandImg from '../assets/polandSchool_img.jpg'
 		]}
 		client:load
 	/>
+	<BasicMeeting flag={PolandFlag} activityPhotos={TPMPhotos} client:load>
+		The 3rd TPM meeting took place in <span class="text-lg font-semibold text-textBlue lg:text-xl"
+			>Tarnów</span
+		>, <span class="text-lg font-semibold text-textBlue lg:text-xl">Poland</span>, hosted by <spam
+			class="text-textOrange"
+			>"III Liceum Ogólnokształcace im. Adama Mickiewicza w."
+		</spam> HighSchool. Partners evaluated C3 and C4 mobilities, including the "Digital Photo
+		Story," and discussed their importance in achieving the project's goals. They also explored ways
+		to promote the project to a wider audience through activities such as conferences, lectures,
+		workshops, and interviews. Additionally, they evaluated online promotion of project products and
+		reviewed the implementation plan. Finally, they exchanged ideas about future activities for C5
+		mobility and celebrated their contributions with a certificate ceremony.
+	</BasicMeeting>
 </Layout>

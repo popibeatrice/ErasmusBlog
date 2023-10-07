@@ -32,7 +32,7 @@ export default function Sidebar({ children }) {
 					<nav className="mt-5 flex w-full flex-col items-start justify-start gap-10">
 						<SidebarSection title="LTT Activities">
 							<Country name="Croatia" route="/croatia" flag={croatiaFlag.src} />
-							<Country name="Turkey" route="/turkey" flag={turkFlag.src} />
+							<Country name="Türkiye" route="/türkiye" flag={turkFlag.src} />
 							<Country name="Poland" route="/poland" flag={polandFlag.src} />
 						</SidebarSection>
 						<SidebarSection title="TP Meetings">
@@ -41,7 +41,7 @@ export default function Sidebar({ children }) {
 						</SidebarSection>
 						<SidebarSection title="Virtual Mobilities">
 							<Country name="Romania" route="/romania" flag={romaniaFlag.src} />
-							<Country name="Turkey" route="/turkey" flag={turkFlag.src} />
+							<Country name="Türkiye" route="/türkiye" flag={turkFlag.src} />
 						</SidebarSection>
 					</nav>
 				</SheetContent>

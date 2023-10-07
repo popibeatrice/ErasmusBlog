@@ -39,7 +39,9 @@ function SliderforDays({ content }) {
 		<swiper-container ref={swiperRef} navigation="true" init="false" pagination="true">
 			{content.map((item, index) => (
 				<swiper-slide key={index}>
-					<span className="absolute bottom-3 left-3 block text-xl font-bold  md:text-2xl lg:text-3xl">{`Day ${item.day}`}</span>
+					<span className="absolute bottom-3 left-3 block text-xl font-bold  md:text-2xl lg:text-3xl">
+						{item.day === '' ? '' : `Day ${item.day}`}
+					</span>
 					<div className="mt-[18vh] flex w-[80%] flex-col items-center justify-start gap-3 px-7 py-20 text-center sm:ml-[5%] sm:mt-[14vh] sm:items-start sm:justify-start lg:ml-[10%]">
 						<h2 className="max-w-2xl px-3 text-center font-mont text-3xl sm:text-start md:text-4xl lg:text-5xl">
 							{item.title}
@@ -53,7 +55,9 @@ function SliderforDays({ content }) {
 						src={item.img.src}
 						alt="Image showcasing the mobility"
 					/>
-					<div className="absolute inset-0 -z-10 h-full w-full bg-black opacity-50"></div>
+					{item.day === '' || (
+						<div className="absolute inset-0 -z-10 h-full w-full bg-black opacity-50"></div>
+					)}
 				</swiper-slide>
 			))}
 		</swiper-container>
