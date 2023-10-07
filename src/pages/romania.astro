@@ -16,11 +16,26 @@ import SliderforDays from '@/components/SliderforDays'
 		<HighPrez
 			country="Romania"
 			schools={[
-				{ city: 'Vaslui', name: '"Emil Racovita" HighSchool', logo: logoRac, img: imgRac },
-				{ city: 'Bucuresti', name: '"Grigore Cerchez" HighSchool', logo: logoBuc, img: imgBuc }
+				{
+					city: 'Vaslui',
+					name: '"Emil Racovita" HighSchool',
+					logo: logoRac,
+					img: imgRac,
+					link: 'https://lervs.ro/',
+					descp:
+						'Founded in 1978, it is committed to providing students with a holistic and comprehensive education. We aim for our students to become active participants in society, benefitting from a well-rounded learning experience through both formal and non-formal methods, preparing them for a successful career according to their potential. With a tradition of over 35 years, our school promotes a focus on excellence and respect for traditional and European values.'
+				},
+				{
+					city: 'Bucuresti',
+					name: '"Grigore Cerchez" HighSchool',
+					logo: logoBuc,
+					img: imgBuc,
+					link: 'https://www.grigorecerchez.ro/',
+					descp:
+						'Founded in 1908 by Ecaterina and Emanoil Pache Protopopescu, the school building later transformed into the "Grigore Cerchez" Industrial School. It was owned by the Chamber of Commerce and Industry from 1926, hosting a School of Arts and Crafts until the communist regime. The technical focus persisted, evolving into the "Tudor Vladimirescu" Vocational School until 1976. In that year, the Industrial High School "Autobuzul" was established. In 1998, the school was renamed "Grigore Cerchez" in honor of the architect. Finally, from September 1, 2009, it became the "Grigore Cerchez Technological College."'
+				}
 			]}
 			client:load
 		/>
-		<SliderforDays client:load />
 	</main>
 </Layout>

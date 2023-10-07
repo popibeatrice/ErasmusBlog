@@ -23,7 +23,7 @@ function HighPrez({ schools, country = 'Romania' }) {
 				</TabsList>
 				{schools.map((school) => (
 					<TabsContent className=" " key={school.name} value={school.city}>
-						<article className="mx-auto mt-5 flex w-[95vw] max-w-3xl flex-col items-start justify-start gap-8 rounded-lg border px-3 py-4 shadow-lg sm:px-5 sm:py-7 lg:px-12 lg:py-14">
+						<article className="mx-auto mt-5 flex w-[95vw] max-w-5xl flex-col items-start justify-start gap-8 rounded-lg border px-3 py-4 shadow-lg sm:px-5 sm:py-7 lg:px-12 lg:py-14">
 							<div className="flex flex-col items-start justify-start gap-4">
 								<div className="flex flex-col items-center justify-center gap-3 self-center min-[375px]:flex-row min-[375px]:self-start">
 									<img
@@ -37,16 +37,23 @@ function HighPrez({ schools, country = 'Romania' }) {
 										{school.name}
 									</h3>
 								</div>
-								<p className="max-w-lg lg:text-lg">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, repudiandae,
-									repellendus cum nobis fuga laborum vero animi, nulla minima adipisci suscipit
-									iste? Officia, possimus. Laudantium dignissimos et nulla quisquam at?
-								</p>
+								<p className="max-w-4xl lg:text-lg">{school.descp}</p>
+								<span className="max-w-lg lg:text-lg">
+									Explore further details on the{' '}
+									<a
+										className="font-bold text-textBlue underline underline-offset-4 transition-all duration-300 hover:font-extrabold"
+										target="_blank"
+										href={school.link}
+									>
+										school's website
+									</a>
+									.
+								</span>
 							</div>
 							<img
 								src={school.img.src}
 								loading="eager"
-								className="h-[400px] w-full self-center rounded-xl object-cover object-center"
+								className="h-[450px] w-full self-center rounded-xl object-cover object-center"
 								decoding="async"
 								alt={school.name}
 							/>
