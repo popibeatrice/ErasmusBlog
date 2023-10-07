@@ -31,17 +31,19 @@ export default function Sidebar({ children }) {
 				<SheetContent>
 					<nav className="mt-5 flex w-full flex-col items-start justify-start gap-10">
 						<SidebarSection title="LTT Activities">
-							<Country name="Croatia" route="/croatia" flag={croatiaFlag.src} />
 							<Country name="Türkiye" route="/türkiye" flag={turkFlag.src} />
 							<Country name="Poland" route="/poland" flag={polandFlag.src} />
+							<Country name="Croatia" route="/croatia" flag={croatiaFlag.src} />
+							<Country name="Romania" route="/romania" flag={romaniaFlag.src} />
 						</SidebarSection>
 						<SidebarSection title="TP Meetings">
-							<Country name="Ireland" route="/ireland" flag={irelandFlag.src} />
 							<Country name="Romania" route="/romania" flag={romaniaFlag.src} />
+							<Country name="Ireland" route="/ireland" flag={irelandFlag.src} />
+							<Country name="Poland" route="/poland" flag={polandFlag.src} />
 						</SidebarSection>
 						<SidebarSection title="Virtual Mobilities">
-							<Country name="Romania" route="/romania" flag={romaniaFlag.src} />
 							<Country name="Türkiye" route="/türkiye" flag={turkFlag.src} />
+							<Country name="Romania" route="/romania" flag={romaniaFlag.src} />
 						</SidebarSection>
 					</nav>
 				</SheetContent>

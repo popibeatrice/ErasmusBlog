@@ -16,7 +16,8 @@ import TPMBuc1 from '../assets/tpmBucuresti1.jpg'
 import TPMBuc2 from '../assets/tpmBucuresti2.jpg'
 import TPMBuc3 from '../assets/tpmBucuresti3.jpg'
 import RomaniaFlag from '../assets/romania.png'
-
+import VMTurcalet1 from '../assets/vmTurcaleti.jpg'
+const VMPhotos = [VMTurcalet1]
 const TPMPhotos = [TPMBuc1, TPMBuc2, TPMBuc3]
 ---
 
@@ -46,7 +47,7 @@ const TPMPhotos = [TPMBuc1, TPMBuc2, TPMBuc3]
 		]}
 		client:load
 	/>
-	<BasicMeeting flag={RomaniaFlag} activityPhotos={TPMPhotos} client:load>
+	<BasicMeeting flag={RomaniaFlag} title="TP Meeting" activityPhotos={TPMPhotos} client:load>
 		Erasmus+ KA220 project "Before It Is Too Late" has started its mobilities with the first
 		transnational meeting that was carried out in the coordinator country,{' '}
 		<span class="text-lg font-semibold text-textBlue lg:text-xl">Romania</span>,{' '}
@@ -57,5 +58,20 @@ const TPMPhotos = [TPMBuc1, TPMBuc2, TPMBuc3]
 		schools/institutions, the following LTT and TPM mobilities were determined and the following
 		project activities were negotiated. We were glad to be hosted in Bucharest and look forward to
 		meeting again!
+	</BasicMeeting>
+	<BasicMeeting flag={RomaniaFlag} title="Virtual Meeting" activityPhotos={VMPhotos} client:load>
+		The Erasmus+ KA220 project "BEFORE IT IS TOO LATE" held its first virtual mobility event on <span
+			class="text-textOrange">May 23rd</span
+		>, <span class="text-textOrange">2023</span>, in coordination with <span class="text-textOrange"
+			>Technological College "Grigore Cerchez"</span
+		> in <span class="text-lg font-semibold text-textBlue lg:text-xl">Bucharest</span>, <span
+			class="text-lg font-semibold text-textBlue lg:text-xl">Romania</span
+		>. Partner schools participated in an online competition to develop a business plan for a
+		recycled products/bio products/natural products company. The event helped students develop their
+		entrepreneurial skills and learn about the market economy. Students developed business plans
+		that capitalized on the opportunities available in their communities, collaborated to create
+		marketing products, used basic concepts specific to recycled products/bio products/natural
+		products, and simulated the internal processes carried out in a real company and its relations
+		with other companies and institutions.
 	</BasicMeeting>
 </Layout>
