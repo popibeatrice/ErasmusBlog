@@ -59,6 +59,23 @@ const TPMPhotos = [TPMBuc1, TPMBuc2, TPMBuc3]
 		project activities were negotiated. We were glad to be hosted in Bucharest and look forward to
 		meeting again!
 	</BasicMeeting>
+	<section class="mt-32 flex min-h-[50vh] w-full flex-col items-center justify-center gap-20 px-3">
+		<div class="flex w-full items-center justify-center gap-2 md:gap-5">
+			<Image
+				src={RomaniaFlag}
+				alt="Flag"
+				class="w-10 rounded-[50%] shadow-lg shadow-neutral-300 md:w-12 xl:w-14"
+			/>
+			<h2 class="font-mont text-3xl xxs:text-4xl sm:text-5xl 2xl:text-6xl">LTT Activity</h2>
+		</div>
+		<p class="max-w-lg text-center text-lg sm:text-xl md:text-2xl">
+			The LTT Activity hosted by <span class="text-textOrange">"Grigore Cerchez" HighSchool</span>
+			 from <span class="font-semibold text-textBlue">Bucharest</span>, <span
+				class="font-semibold text-textBlue">Romania</span
+			>, will take place between <span class="font-semibold text-textOrange">October 16th</span> and
+			<span class="font-semibold text-textOrange">20th</span>.
+		</p>
+	</section>
 	<BasicMeeting flag={RomaniaFlag} title="Virtual Meeting" activityPhotos={VMPhotos} client:load>
 		The Erasmus+ KA220 project "BEFORE IT IS TOO LATE" held its first virtual mobility event on <span
 			class="text-textOrange">May 23rd</span
