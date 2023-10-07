@@ -1,7 +1,6 @@
 import SliderforDays from '@/components/SliderforDays'
 
 export default function BasicMeeting({ children, flag, activityPhotos }) {
-	let content = []
 	return (
 		<section class="flex w-full flex-col items-center justify-center gap-5 px-3 lg:flex-row lg:justify-between">
 			<div class="flex flex-col items-center justify-center gap-10 lg:ml-[10%] lg:items-start">
@@ -18,15 +17,16 @@ export default function BasicMeeting({ children, flag, activityPhotos }) {
 			</div>
 
 			<div class=" w-full max-w-5xl sm:px-5 lg:w-1/2 lg:px-12">
-				{activityPhotos.map((photo) =>
-					content.push({
-						title: '',
-						descp: '',
-						img: photo,
-						day: ''
-					})
-				)}
-				<SliderforDays content={content} />
+				<SliderforDays
+					content={activityPhotos.map((photo) => {
+						return {
+							title: '',
+							descp: '',
+							img: photo,
+							day: ''
+						}
+					})}
+				/>
 			</div>
 		</section>
 	)
