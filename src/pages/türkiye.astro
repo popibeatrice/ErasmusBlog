@@ -21,7 +21,7 @@ import day4 from '../assets/Poland_day_4.jpg'
 import day5 from '../assets/Poland_day_5.jpg'
 ---
 
-<Layout title="BITL Vlog | Türkiye">
+<Layout title="BITL Blog | Türkiye">
 	<CountryLand title="Türkiye" />
 	<HighPrez
 		country="Türkiye"
@@ -47,28 +47,20 @@ import day5 from '../assets/Poland_day_5.jpg'
 		]}
 		client:load
 	/>
-	<SliderforDays
-		content={[
-			{
-				title: 'Introductions, and Climate Change Awareness',
-				descp:
-					'Our second Erasmus+ LTT in Tarnow, Poland, began on the first day. After the welcoming speeches of the host school, each partner introduced themselves and the students made presentations on environmental problems. They had icebreaker activities at school and then carried out an outdoor activity.',
-				img: day1,
-				day: '1'
-			}
-		]}
-	/>
-	<section class="mt-32 flex min-h-[50vh] w-full flex-col items-center justify-center gap-20 px-3">
+	<section
+		id="vm"
+		class="mt-32 flex min-h-[50vh] w-full flex-col items-center justify-center gap-20 px-3"
+	>
 		<div class="flex w-full items-center justify-center gap-2 md:gap-5">
 			<Image
 				src={TurcaleteFlag}
 				alt="Flag"
 				class="w-10 rounded-[50%] shadow-lg shadow-neutral-300 md:w-12 xl:w-14"
 			/>
-			<h2 class="font-mont text-3xl xxs:text-4xl sm:text-5xl 2xl:text-6xl">LTT Activity</h2>
+			<h2 class="font-mont text-3xl xxs:text-4xl sm:text-5xl 2xl:text-6xl">Virtual Meeting</h2>
 		</div>
 		<p class="max-w-lg text-center text-lg sm:text-xl md:text-2xl">
-			The LTT Activity hosted by <span class="text-textOrange"
+			The Virtual Meeting hosted by <span class="text-textOrange"
 				>"BTSO Ali Osman Sönmez Sosyal Bilimler Lisesi" HighSchool</span
 			>
 			 from <span class="font-semibold text-textBlue">Bursa</span>, <span

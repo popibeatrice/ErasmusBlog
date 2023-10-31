@@ -31,19 +31,37 @@ export default function Sidebar({ children }) {
 				<SheetContent>
 					<nav className="mt-5 flex w-full flex-col items-start justify-start gap-10">
 						<SidebarSection title="LTT Activities">
-							<Country name="Türkiye" route="/türkiye" flag={turkFlag.src} />
-							<Country name="Poland" route="/poland" flag={polandFlag.src} />
-							<Country name="Croatia" route="/croatia" flag={croatiaFlag.src} />
-							<Country name="Romania" route="/romania" flag={romaniaFlag.src} />
+							<Country name="Türkiye" route="/türkiye#ltt" flag={turkFlag.src} />
+							<Country name="Poland" route="/poland#ltt" flag={polandFlag.src} />
+							<Country name="Croatia" route="/croatia#ltt" flag={croatiaFlag.src} />
+							<Country name="Romania" route="/romania#ltt" flag={romaniaFlag.src} />
 						</SidebarSection>
 						<SidebarSection title="TP Meetings">
-							<Country name="Romania" route="/romania" flag={romaniaFlag.src} />
-							<Country name="Ireland" route="/ireland" flag={irelandFlag.src} />
-							<Country name="Poland" route="/poland" flag={polandFlag.src} />
+							<Country name="Romania" route="/romania#tp" flag={romaniaFlag.src} />
+							<Country name="Ireland" route="/ireland#tp" flag={irelandFlag.src} />
+							<Country name="Poland" route="/poland#tp" flag={polandFlag.src} />
 						</SidebarSection>
 						<SidebarSection title="Virtual Mobilities">
-							<Country name="Türkiye" route="/türkiye" flag={turkFlag.src} />
-							<Country name="Romania" route="/romania" flag={romaniaFlag.src} />
+							<Country name="Türkiye" route="/türkiye#vm" flag={turkFlag.src} />
+							<Country name="Romania" route="/romania#vm" flag={romaniaFlag.src} />
+						</SidebarSection>
+						<SidebarSection title="Media Content">
+							<li>
+								<a
+									href="/photos"
+									className="rounded-sm underline underline-offset-4 ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+								>
+									<span className="text-lg lg:text-xl">Photos</span>
+								</a>
+							</li>
+							<li>
+								<a
+									href="/videos"
+									className="rounded-sm underline underline-offset-4 ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+								>
+									<span className="text-lg lg:text-xl">Videos</span>
+								</a>
+							</li>
 						</SidebarSection>
 					</nav>
 				</SheetContent>

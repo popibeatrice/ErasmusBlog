@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { YouTube } from '@astro-community/astro-embed-youtube'
+
+import RomaniaFlag from '../assets/romania.png'
+import IrlandFlag from '../assets/ireland.png'
+import CroatiaFlag from '../assets/croatia.png'
+import PolandFlag from '../assets/poland.png'
+import TurkeyFalg from '../assets/turkey.png'
+
+import { Image } from 'astro:assets'
+---
+
+<Layout title="BITL Blog | Videos">
+	<main
+		class="mx-[5%] my-[125px] flex flex-col items-center justify-center gap-20 sm:mx-[10%] lg:gap-36"
+	>
+		<section class="flex min-h-screen w-full flex-col items-center justify-center gap-32">
+			<h2 class="font-mont text-4xl font-extralight md:text-5xl lg:text-6xl">Video Content</h2>
+			<div class="grid w-full grid-cols-1 gap-10 xl:grid-cols-3">
+				<div class="flex w-full flex-col items-center justify-center gap-5">
+					<div class="flex items-center justify-center gap-3">
+						<Image class="h-10 w-10" src={TurkeyFalg} alt="Turkey Flag" />
+						<h2 class="font-mont text-3xl font-extralight md:text-4xl lg:text-5xl">Türkiye</h2>
+					</div>
+					<YouTube
+						class="w-full rounded-lg"
+						id="https://www.youtube.com/watch?v=calKGDXl7JU&ab_channel=Beforeitistoolate"
+					/>
+				</div>
+				<div class="flex w-full flex-col items-center justify-center gap-5">
+					<div class="flex items-center justify-center gap-3">
+						<Image class="h-10 w-10" src={PolandFlag} alt="Poland Flag" />
+						<h2 class="font-mont text-3xl font-extralight md:text-4xl lg:text-5xl">Poland</h2>
+					</div>
+					<YouTube
+						class="w-full rounded-lg"
+						id="https://www.youtube.com/watch?v=uFG7FMgif0E&ab_channel=Beforeitistoolate"
+					/>
+				</div>
+				<div class="flex w-full flex-col items-center justify-center gap-5">
+					<div class="flex items-center justify-center gap-3">
+						<Image class="h-10 w-10" src={CroatiaFlag} alt="Croatia Flag" />
+						<h2 class="font-mont text-3xl font-extralight md:text-4xl lg:text-5xl">Croatia</h2>
+					</div>
+					<YouTube
+						class="w-full rounded-lg"
+						id="https://www.youtube.com/watch?v=ZwjDoG595Lo&ab_channel=Beforeitistoolate"
+					/>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
