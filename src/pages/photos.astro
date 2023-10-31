@@ -1,0 +1,33 @@
+---
+import Gallery from '@/components/Gallery.astro'
+import Layout from '../layouts/Layout.astro'
+
+const CroatImgs = await Astro.glob('../poze-galerie/Croat/*')
+const PolandImgs = await Astro.glob('../poze-galerie/Polonia/*')
+const TurkImgs = await Astro.glob('../poze-galerie/Turk/*')
+---
+
+<Layout title="BITL Blog | Photos">
+	<main
+		class="mx-[5%] my-[125px] flex flex-col items-center justify-center gap-20 sm:mx-[10%] lg:gap-36"
+	>
+		<div class="flex flex-col items-start justify-start gap-5">
+			<h2 class="font-mont text-4xl font-extralight md:text-5xl lg:text-6xl">
+				Photos from Türkiye:
+			</h2>
+			<Gallery allImgs={TurkImgs} />
+		</div>
+		<div class="flex flex-col items-start justify-start gap-5">
+			<h2 class="font-mont text-4xl font-extralight md:text-5xl lg:text-6xl">
+				Photos from Poland:
+			</h2>
+			<Gallery allImgs={PolandImgs} />
+		</div>
+		<div class="flex flex-col items-start justify-start gap-5">
+			<h2 class="font-mont text-4xl font-extralight md:text-5xl lg:text-6xl">
+				Photos from Croatia:
+			</h2>
+			<Gallery allImgs={CroatImgs} />
+		</div>
+	</main>
+</Layout>
