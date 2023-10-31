@@ -10,6 +10,9 @@ import nazImg from '../assets/nazili_img.jpg'
 import bursaImg from '../assets/bursa_img.jpg'
 
 import TurcaleteFlag from '../assets/turkey.png'
+import VMTurcalet from '../assets/vmTurcia.jpg'
+import VMTurcalet2 from '../assets/vmTurcia2.jpg'
+const VMPhotos = [VMTurcalet, VMTurcalet2]
 import { Image } from 'astro:assets'
 ---
 
@@ -39,22 +42,23 @@ import { Image } from 'astro:assets'
 		]}
 		client:load
 	/>
-	<section class="mt-32 flex min-h-[50vh] w-full flex-col items-center justify-center gap-20 px-3">
-		<div class="flex w-full items-center justify-center gap-2 md:gap-5">
-			<Image
-				src={TurcaleteFlag}
-				alt="Flag"
-				class="w-10 rounded-[50%] shadow-lg shadow-neutral-300 md:w-12 xl:w-14"
-			/>
-			<h2 class="font-mont text-3xl xxs:text-4xl sm:text-5xl 2xl:text-6xl">LTT Activity</h2>
-		</div>
-		<p class="max-w-lg text-center text-lg sm:text-xl md:text-2xl">
-			The LTT Activity hosted by <span class="text-textOrange"
-				>"BTSO Ali Osman Sönmez Sosyal Bilimler Lisesi" HighSchool</span
-			>
-			 from <span class="font-semibold text-textBlue">Bursa</span>, <span
-				class="font-semibold text-textBlue">Türkiye</span
-			>, will take place on <span class="font-semibold text-textOrange">October 10th</span>.
-		</p>
-	</section>
+	<BasicMeeting flag={TurcaleteFlag} title="Virtual Meeting" activityPhotos={VMPhotos} client:load>
+		The second virtual mobility of the Erasmus+ KA220 project "BEFORE IT IS TOO LATE" took place on
+		<span class="text-textOrange">October 10th</span>, <span class="text-textOrange">2023</span>, on
+		the Google Meet platform, hosted by <span class="text-textOrange"
+			>BTSO Ali Osman Sönmez Sosyal Bilimler Lisesi</span
+		> from <span class="text-lg font-semibold text-textBlue lg:text-xl">Bursa</span>, <span
+			class="text-lg font-semibold text-textBlue lg:text-xl">Türkiye</span
+		>. All partner schools attended the mobility and discussed the question <span
+			class="text-textBlue">“Are Nuclear Power Stations needed to prevent climate change?”</span
+		>. Students worked in teams to create presentations and discuss the topic using the “The 6
+		Thinking Hats Technique”. Each team approached the topic from a different perspective, according
+		to the color of hat they represented. All teams made excellent presentations, approaching the
+		topic from a variety of angles. They also asked and answered each other's questions. At the end
+		of the discussion, the participating students voted for the popularity award, and the jury
+		members from each school awarded the 1st, 2nd, and 3rd prizes. BTSO Ali Osman Sönmez Sosyal
+		Bilimler Lisesi received the popularity award and the 3rd prize, Liceul Teoretic "Emil Racovita"
+		received the 2nd prize, and Liceum Ogolnoksztalcace im. Adama Mickiewicza w Tarnowie was awarded
+		the 1st prize.
+	</BasicMeeting>
 </Layout>
