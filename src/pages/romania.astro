@@ -6,11 +6,20 @@ import HighPrez from '@/components/HighPrez'
 import Layout from '@/layouts/Layout.astro'
 
 import BasicMeeting from '../components/BasicMeeting'
+import SliderforDays from '@/components/SliderforDays'
 
 import logoRac from '../assets/sigla-ler.jpg'
 import imgRac from '../assets/emailRacovita.jpg'
 import logoBuc from '../assets/crigoreBucuresti.jpg'
 import imgBuc from '../assets/grigoreCerchez.jpg'
+
+import day1 from '../assets/LttaBuc1.jpg'
+import day2 from '../assets/LttaBuc2.jpg'
+import day2Secund from '../assets/LttaBuc3.jpg'
+import day3 from '../assets/LttaBuc5.jpg'
+import day4 from '../assets/LttaBuc7.jpg'
+import day4Secund from '../assets/LttaBuc6.jpg'
+import day5 from '../assets/LttaBuc8.jpg'
 
 import TPMBuc1 from '../assets/tpmBucuresti1.jpg'
 import TPMBuc2 from '../assets/tpmBucuresti2.jpg'
@@ -47,6 +56,7 @@ const TPMPhotos = [TPMBuc1, TPMBuc2, TPMBuc3]
 		]}
 		client:load
 	/>
+
 	<BasicMeeting flag={RomaniaFlag} title="TP Meeting" activityPhotos={TPMPhotos} client:load>
 		Erasmus+ KA220 project "Before It Is Too Late" has started its mobilities with the first
 		transnational meeting that was carried out in the coordinator country,{' '}
@@ -59,26 +69,71 @@ const TPMPhotos = [TPMBuc1, TPMBuc2, TPMBuc3]
 		project activities were negotiated. We were glad to be hosted in Bucharest and look forward to
 		meeting again!
 	</BasicMeeting>
-	<div id="ltt"></div>
-	<section class="mt-32 flex min-h-[50vh] w-full flex-col items-center justify-center gap-20 px-3">
-		<div class="flex w-full items-center justify-center gap-2 md:gap-5">
+	<div class="">
+		<div class="mb-10 mt-32 flex w-full items-center justify-center gap-2 md:gap-5">
 			<Image
 				src={RomaniaFlag}
 				alt="Flag"
 				class="w-10 rounded-[50%] shadow-lg shadow-neutral-300 md:w-12 xl:w-14"
 			/>
-			<h2 class="font-mont text-3xl xxs:text-4xl sm:text-5xl 2xl:text-6xl">LTT Activity</h2>
+			<h2 class="font-mont text-3xl xxs:text-4xl sm:text-5xl 2xl:text-6xl">LTTA Mobility</h2>
 		</div>
-		<p class="max-w-lg text-center text-lg sm:text-xl md:text-2xl">
-			The LTT Activity hosted by <span class="text-textOrange">"Grigore Cerchez" HighSchool</span>
-			 from <span class="font-semibold text-textBlue">Bucharest</span>, <span
-				class="font-semibold text-textBlue">Romania</span
-			>, will take place between <span class="font-semibold text-textOrange">October 16th</span> and
-
-
-			<span class="font-semibold text-textOrange">20th</span>.
-		</p>
-	</section>
+		<div id="ltt" class="h-1 w-full opacity-0"></div>
+		<SliderforDays
+			content={[
+				{
+					title: '"Climate Change Awareness" Presentations',
+					descp:
+						'During the first day of the LTTA mobility in Romania, presentations on pollution and waste sorting, as well as student-created materials on natural/national parks and waste recycling, garnered significant interest. These contributions are increasing awareness of environmental consciousness and the importance of a cleaner environment for future generations.',
+					img: day1,
+					day: '1'
+				},
+				{
+					title: 'The Paper Mill Museum',
+					descp:
+						'On the second day, the participants visited the fascinating Paper Mill Museum for an exciting documentation activity and participated in a workshop on the traditional craft of "Rush Weaving."',
+					img: day2,
+					day: '2'
+				},
+				{
+					title: ' Goose Chase app ',
+					descp:
+						'Using the Goose Chase app led to an engaging environmental-themed "Treasure Hunt" within Comana Natural Park. Posters were crafted with the theme "Protect nature!" and a flash mob was performed in the open, highlighting a collective love and commitment to nature.',
+					img: day2Secund,
+					day: '2'
+				},
+				{
+					title: '"Urlătoarea" Waterfall',
+					descp:
+						'A nature walk to the "Urlătoarea" Waterfall in Bușteni allowed us to experience the magnificent atmosphere of nature. With these splendid nature activities, we continue to raise awareness about the environment and emphasize the value of nature. We will continue our efforts to leave a cleaner and more livable environment for future generations.',
+					img: day3,
+					day: '3'
+				},
+				{
+					title: 'Grigore Antipa National Museum of Natural History',
+					descp:
+						'Participants monitored air quality applications at "Drumul Taberei" Park, observing environmental changes and learning about the importance of preserving natural habitats and biodiversity at the Grigore Antipa National Museum of Natural History. With these activities, we continue our efforts to increase awareness about the environment.',
+					img: day4,
+					day: '4'
+				},
+				{
+					title: 'Proper waste separation',
+					descp:
+						'Informative activities were organized to raise awareness about the proper separation of waste. At the waste sorting station S.C. 3r Green Sr. Chıtıla, we educated and created awareness about environmental consciousness.',
+					img: day4Secund,
+					day: '4'
+				},
+				{
+					title: 'The last day',
+					descp:
+						'On the final day of the LTTA mobility in Romania, a workshop was conducted at the school, resulting in a video/photo collage and an e-book about climate change activities. Air quality observations were shared, and products created during the mobility were presented at the school, followed by a certificate ceremony and farewell party at Casa Mino Restaurant. This experience contributes to environmental awareness and global consciousness.',
+					img: day5,
+					day: '5'
+				}
+			]}
+			client:load
+		/>
+	</div>
 	<BasicMeeting flag={RomaniaFlag} title="Virtual Meeting" activityPhotos={VMPhotos} client:load>
 		The Erasmus+ KA220 project "BEFORE IT IS TOO LATE" held its first virtual mobility event on <span
 			class="text-textOrange">May 23rd</span
